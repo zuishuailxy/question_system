@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	登陆
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+	<div class="row mt-4">
+		<div class="col"></div>
+
+		<div class="col">
+			<form method="post" action="{{ url_for('user.login') }}">
+				<div class="form-group">
+					<label for="exampleInputEmail1">邮箱</label>
+					<input type="email" name="email" class="form-control" aria-describedby="emailHelp">
+					<small id="emailHelp" class="form-text text-muted">我们不会把邮箱用于其他用途</small>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">密码</label>
+					<input type="password" name="password" class="form-control">
+				</div>
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-block">立即登陆</button>
+				</div>
+			</form>
+
+		</div>
+		<div class="col">
+		</div>
+	</div>
+{% endblock %}
